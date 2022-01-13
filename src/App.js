@@ -5,7 +5,14 @@ function App() {
 
   const [appState, changeState] = useState({
     activeObject: {id: 1},
-    objects: [{id: 1}, {id: 2}, {id: 3}]
+    objects: [
+      {id: 1,
+      color: "red"}, 
+      {id: 2,
+      color: "blue"}, 
+      {id: 3,
+      color: "green"}
+    ]
   });
 
   function activeToggle(index){
@@ -20,23 +27,33 @@ function App() {
     }
   }
 
+  function colorBoxToggle(){
+    if(appState.objects[0] === appState.activeObject) {
+      return "colorbox red";
+    } else if(appState.objects[1] === appState.activeObject){
+      return "colorbox blue";
+    } else {
+      return "colorbox green";
+    }
+  }
+
   return (
-    <div>
+    <div className="App">
 
     <div>
-      <div className="colorBox">
-        Test
+      <div className={colorBoxToggle()}>
       </div>
     </div>
     
-      <div className="App">
+      <div>
 
       { appState.objects.map((element, index) => (
+        
         <div
           key={index}
           className={toggleStlyes(index)}
           onClick={() => {activeToggle(index)}}
-          >
+          > {element.color}
         </div>
       )) }
     </div>
