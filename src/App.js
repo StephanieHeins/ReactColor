@@ -12,6 +12,14 @@ function App() {
     changeState({...appState, activeObject: appState.objects[index]});
   }
 
+  function toggleStlyes(index){
+    if(appState.objects[index] === appState.activeObject) {
+      return "boxes active";
+    } else {
+      return "boxes inactive";
+    }
+  }
+
   return (
     <div>
 
@@ -26,7 +34,7 @@ function App() {
       { appState.objects.map((element, index) => (
         <div
           key={index}
-          className="boxes active"
+          className={toggleStlyes(index)}
           onClick={() => {activeToggle(index)}}
           >
         </div>
