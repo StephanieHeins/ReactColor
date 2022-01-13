@@ -9,7 +9,15 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div>
+
+    <div>
+      <div className="colorBox">
+        Test
+      </div>
+    </div>
+    
+      <div className="App">
 
       { appState.objects.map((element, index) => (
         <div
@@ -19,6 +27,7 @@ function App() {
           >
         </div>
       )) }
+    </div>
     </div>
   );
 }

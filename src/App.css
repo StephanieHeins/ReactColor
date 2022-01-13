@@ -23,3 +23,13 @@
 .inactive {
   background-color: rgb(53, 107, 109);
 }
+
+.colorBox {
+  border: solid blue;
+  display: flex;
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
