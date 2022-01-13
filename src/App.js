@@ -10,12 +10,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        Test
-      </h1>
 
       { appState.objects.map((element, index) => (
-        <div>
+        <div
+          key={index}
+          className="boxes active"
+
+          >
         </div>
       )) }
     </div>

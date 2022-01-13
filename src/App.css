@@ -1,4 +1,25 @@
 .App {
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
+.boxes {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+}
+
+.boxes:hover {
+  background-color: rgb(171, 231, 231);
+}
+
+.active {
+  background-color: rgb(135, 243, 176);
+}
+
+.inactive {
+  background-color: rgb(53, 107, 109);
+}
